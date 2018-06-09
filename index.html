@@ -1,0 +1,89 @@
+
+<html lang="en">
+    <head>
+        <!-- Meta Tag -->
+        <meta charset="utf-8">
+        
+        <!-- Tab Title -->
+        <title>Wine Selection By Taste</title>
+        
+        <!-- CSS Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/winestyle.css">
+        <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+        <link rel="stylesheet" type="text/css" href="css/sequence.css"/>
+        <!-- D3.js Source -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script type= "text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    </head>
+    
+    <body>
+
+
+        <!-- Title of our d3 project -->
+        <div class="maintitle">
+            <h1>Wine Selection By Taste</h1>
+        </div>
+
+        <div class="simcontainer">
+            <div class="optioncontainer">
+                <div class="tooltip">
+
+                    <div class="tooltiptext">
+                        <h1>Welcome to Wine Selection by Taste</h1>
+                        <h2 id="startText">To begin, select a flavor from the sunburst chart below.</h2>
+                        <div id="sequence"></div>
+                        <div class="chart">
+                        <script type="text/javascript" src="js/wine_select.js"></script>
+                        </div>
+                    </div>
+                    <div id="sidebar">
+
+                      <input type="checkbox" id="togglelegend"> Legend<br/>
+                      <div id="legend" ></div>
+                    </div>
+                    <script type="text/javascript" src="colors.js">
+                    </script>
+                    <script type="text/javascript">
+                      // Hack to make this example display correctly in an iframe on bl.ocks.org
+                      d3.select(self.frameElement).style("height", "700px");
+                    </script> 
+                </div>
+                    
+                
+            </div>
+            <div class="graphcontainer" id="graphcontainer"> 
+                <h1>Quality of Wine Rated By Experts On Vintage Years</h1>
+                <div class="graph"></div>
+                <div id="rulescontainer"></div>
+                
+            </div>
+
+        </div>             
+        <div class="additionalinfo" style="list-style: none;">
+            <div id="memberslist">
+                <h3>Members</h3>
+                <li>Hanlin Chen</li>
+                <li>Andrew Johnson</li>
+                <li>Zihua Huang</li>
+                <li>Kevin Tran</li>
+            </div>
+            
+            <div id="classinfolist" style="list-style: none;">
+                <li>CMPS 165</li>
+                <li>Data Programming for Visualization</li>
+                <li>Spring 2018</li>
+                <li>Suresh Lodha</li>
+            </div>
+            
+            <div id="filesubmitlist" style="list-style: none;">
+
+            </div>
+            
+            <div id="resourceslist" style="list-style: none;">
+                <h3>Resources</h3>
+            </div>
+        </div>
+    </body>
+</html>
