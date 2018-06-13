@@ -24,7 +24,7 @@ body {
 /* CSS for simulation container */
 .simcontainer {
     height: 1600px;
-    width: 1800px;
+    width: 100%;
     margin: 0 auto;
     text-shadow: 0.5px 0.5px 0.5px #000;
 }
@@ -32,26 +32,12 @@ body {
 /* CSS for user game options */
 .optioncontainer {
     height: 1600px;
-    width: 460px;
+    width: 60%;
     float: left;
     margin: 0px;
     background-color:#c7fea7;
     font-size: 12px;
     border-top: 2px solid #ddd;
-}
-
-.tooltip {
-    width: 542px;
-    height: 780px;
-    text-align: center;
-    opacity: 0.8;
-}
-
-
-.tooltiptext {
-    float: center;
-    height: 280px;
-    width: 400px;
 }
 
 #gamecontainer {
@@ -106,20 +92,36 @@ body {
 /* CSS for the graph */
 .graphcontainer {
     height: 1600px;
-    width: 1330px;
+    width: 40%;
     float: right;
     background-color: #ADD8E6;
     border-top: 2px solid #ddd;
 }
 
 path{
-    stroke: grey;
-    stroke-width: 2;
+    stroke: black;
+    stroke-width: 0;
     fill: none;
-    opacity:0.2;
-    shape-rendering: crispEdges;
+    cursor: pointer;
+}
+.slice {
+    cursor: pointer;
 }
 
+.slice .main-arc {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.slice .hidden-arc {
+    fill: none;
+}
+
+.slice text {
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
 .brokeLine{
     stroke:darkred;
     stroke-width: 2;

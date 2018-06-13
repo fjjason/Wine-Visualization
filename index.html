@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <html lang="en">
     <head>
@@ -31,25 +30,13 @@
             <div class="optioncontainer">
                 <div class="tooltip">
 
-                    <div class="tooltiptext">
-                        <h1>Welcome to Wine Selection by Taste</h1>
-                        <h2 id="startText">To begin, select a flavor from the sunburst chart below.</h2>
-                        <div id="sequence"></div>
-                        <div class="chart">
-                        <script type="text/javascript" src="js/wine_select.js"></script>
-                        </div>
-                    </div>
-                    <div id="sidebar">
+                    <h1>Welcome to Wine Selection by Taste</h1>
+                    <h2 id="startText">To begin, select a flavor from the sunburst chart below.</h2>
+                    <div id="sequence"></div>
+                    <div class="chart" id = "chart"></div>
 
-                      <input type="checkbox" id="togglelegend"> Legend<br/>
-                      <div id="legend" ></div>
-                    </div>
-                    <script type="text/javascript" src="colors.js">
-                    </script>
-                    <script type="text/javascript">
-                      // Hack to make this example display correctly in an iframe on bl.ocks.org
-                      d3.select(self.frameElement).style("height", "700px");
-                    </script> 
+                    <script type="text/javascript" src="js/wine_select.js"></script>
+                    <script type="text/javascript" src="sequences.js"></script>
                 </div>
                     
                 
@@ -88,35 +75,3 @@
         </div>
     </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sequences sunburst</title>
-    <script src="//d3js.org/d3.v4.min.js"></script>
-    <link rel="stylesheet" type="text/css"
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
-    <link rel="stylesheet" type="text/css" href="sequences.css"/>
-  </head>
-  <body>
-    <div id="main">
-      <div id="sequence"></div>
-      <div id="chart">
-        
-      </div>
-    </div>
-    <div id="sidebar">
-      <input type="checkbox" id="togglelegend"> Legend<br/>
-      <div id="legend" style="visibility: hidden;"></div>
-    </div>
-    <script type="text/javascript" src="colors.js">
-    </script>
-    <script type="text/javascript" src="sequences.js"></script>
-    <script type="text/javascript">
-      // Hack to make this example display correctly in an iframe on bl.ocks.org
-      d3.select(self.frameElement).style("height", "700px");
-  </script> 
-  </body>
-</html>
->>>>>>> origin/master
