@@ -3,7 +3,19 @@ body {
     font-family: sans-serif;
     background-color: #F0F8FF;
 }
-
+.tooltip {
+    position: absolute;             
+    width: 200px;                                                    
+    font: 12px sans-serif;
+    font-weight: bold;
+    background: white; 
+    border-style: solid;
+    border-color: #A80000 ;        
+    border-radius: 5px;         
+    pointer-events: none;
+    padding-top: 5px;
+    padding-left: 5px;
+}
 /* CSS for the index title "A Thousand Nights in Vegas */
 .maintitle {
 
@@ -29,7 +41,7 @@ body {
     text-shadow: 0.5px 0.5px 0.5px #000;
 }
 
-.tooltip {
+.sun {
     width: 60%;
     height: 10000px;
     text-align: center;
@@ -37,10 +49,10 @@ body {
 /* CSS for user game options */
 .optioncontainer {
     height: 1600px;
-    width: 60%;
+    width: 55%;
     float: left;
     margin: 0px;
-    background-color:#c7fea7;
+    background-color:#CCFFFF;
     font-size: 12px;
     border-top: 2px solid #ddd;
 }
@@ -97,13 +109,19 @@ body {
 /* CSS for the graph */
 .graphcontainer {
     height: 1600px;
-    width: 40%;
+    width: 45%;
     float: right;
-    background-color: #ADD8E6;
+    background-color: #CCFFFF;
     border-top: 2px solid #ddd;
 }
 
 path{
+    stroke: black;
+    stroke-width: 1;
+    fill: none;
+    cursor: pointer;
+}
+#chart path{
     stroke: black;
     stroke-width: 0;
     fill: none;

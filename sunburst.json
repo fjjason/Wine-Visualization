@@ -3,32 +3,76 @@
   [{
       "name": "fruity",
       "children": [
-      {"name": "Mango", "size": 4}, 
+      {"name": "fresh", "children": 
+          [{
+              "name": "Sauvignon","size":4
+          }, {
+              "name": "raspberry", "size":4
+          }]}, 
       { "name": "Berry", "children": 
           [{
-              "name": "strawberry",
-              "children": [
-              {"name": "Wine 1", "size": 4}, 
-              {"name": "Wine 2", "size": 4}
-              ]
+              "name": "Quinta","size":4
           }, {
-              "name": "raspberry",
-              "children": [
-              {"name": "Wine 1", "size": 3}, 
-              {"name": "Wine 2", "size": 3}, 
-              {"name": "Wine 3", "size": 3}]
+              "name": "Wine2", "size":4
           }]}
       ]
   }, {
       "name": "nutty",
       "children": [
-      {"name": "Hazelnut", "size": 3}, 
-      {"name": "Walnut", "size": 3}, 
-      {"name": "Deez Nuts", "size": 3}]
-  }, {
+      {"name": "Hazelnut", "children": 
+          [{
+              "name": "strawberry","size":4
+          }, {
+              "name": "raspberry", "size":4
+          }]}, 
+      {"name": "Walnut", "children": 
+          [{
+              "name": "strawberry","size":4
+          }, {
+              "name": "raspberry", "size":4
+          }]}, 
+      {"name": "Deez Nuts", "children": 
+          [{
+              "name": "strawberry","size":4
+          }, {
+              "name": "raspberry", "size":4
+          }]}]
+  }, 
+  {
+        "name": "Woody",
+        "children": [
+        {"name": "Oak", "children": 
+            [{
+                "name": "Tarara","size":4
+            }, {
+                "name": "Ferrari", "size":4
+            }]}, 
+        {"name": "Wood", "children": 
+            [{
+                "name": "strawberry","size":4
+            }, {
+                "name": "raspberry", "size":4
+            }]}, 
+        {"name": "Deez Nuts", "children": 
+            [{
+                "name": "strawberry","size":4
+            }, {
+                "name": "raspberry", "size":4
+            }]}]
+    }, {
       "name": "Others",
       "children": [
-      {"name": "Chemical", "size": 4}, 
-      {"name": "Sweet", "size": 4}]
+      {"name": "Chemical", "children": 
+          [{
+              "name": "strawberry","size":4
+          }, {
+              "name": "raspberry", "size":4
+          }]}, 
+      {"name": "Sweet", "children": 
+          [{
+              "name": "strawberry","size":4
+          }, {
+              "name": "raspberry", "size":4
+          }]}]
   }]
 }
