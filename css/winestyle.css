@@ -29,6 +29,11 @@ body {
     text-shadow: 0.5px 0.5px 0.5px #000;
 }
 
+.tooltip {
+    width: 60%;
+    height: 10000px;
+    text-align: center;
+}
 /* CSS for user game options */
 .optioncontainer {
     height: 1600px;
