@@ -1,0 +1,34 @@
+{
+  "name": "Wine", "children": 
+  [{
+      "name": "fruity",
+      "children": [
+      {"name": "Mango", "size": 4}, 
+      { "name": "Berry", "children": 
+          [{
+              "name": "strawberry",
+              "children": [
+              {"name": "Wine 1", "size": 4}, 
+              {"name": "Wine 2", "size": 4}
+              ]
+          }, {
+              "name": "raspberry",
+              "children": [
+              {"name": "Wine 1", "size": 3}, 
+              {"name": "Wine 2", "size": 3}, 
+              {"name": "Wine 3", "size": 3}]
+          }]}
+      ]
+  }, {
+      "name": "nutty",
+      "children": [
+      {"name": "Hazelnut", "size": 3}, 
+      {"name": "Walnut", "size": 3}, 
+      {"name": "Deez Nuts", "size": 3}]
+  }, {
+      "name": "Others",
+      "children": [
+      {"name": "Chemical", "size": 4}, 
+      {"name": "Sweet", "size": 4}]
+  }]
+}
