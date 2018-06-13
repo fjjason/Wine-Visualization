@@ -217,6 +217,7 @@ $(document).ready(function(){
                 .attr('d', middleArcLine);
 
             var text = newSlice.append('text')
+                .style('fill', '#fff')
                 .attr('display', d => textFits(d) ? null : 'none');
 
             // Add white contour
@@ -225,8 +226,8 @@ $(document).ready(function(){
                 .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
                 .text(d => d.data.name)
                 .style('fill', 'none')
-                .style('stroke', '#fff')
-                .style('stroke-width', 5)
+                .style('stroke', '#000')
+                .style('stroke-width', .8)
                 .style('stroke-linejoin', 'round');
 
             text.append('textPath')
