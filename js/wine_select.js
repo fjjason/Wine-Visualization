@@ -233,8 +233,13 @@ $(document).ready(function(){
                 .attr('startOffset','50%')
                 .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
                 .text(d => d.data.name);
+            var img = svg1.append("svg:image")
+                .attr("xlink:href", "grape.png")
+                .attr("width", 50)
+                .attr("height", 50)
+                .attr("x", -20)
+                .attr("y", -20);
         });
-
         function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
             // Reset to top-level if no data point specified
 
