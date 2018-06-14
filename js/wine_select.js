@@ -216,6 +216,9 @@ function highlightSelectedSlice(c, i) {
                 return true;
             } else if (d == clicked) {
                 d.prevClicked = true;
+                // THIS IS WHERE WE FILTER INDIVIDUAL DOTS
+
+                // HERE
                 return true;
             } else {
                 d.prevClicked = false;
