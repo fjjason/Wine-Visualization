@@ -16,56 +16,31 @@
     <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 
-<body>
+<body style="margin-left: 5px">
     <!-- Title of our d3 project -->
     <div class="maintitle">
-        <h1>Wine Selection By Taste</h1>
+        <h1 style="margin-bottom: 25px">Wine Selection By Taste</h1>
     </div>
     <div class="simcontainer">
         <div class="optioncontainer">
             <div class="sun">
-                <h1>Welcome to Wine Selection by Taste</h1>
-                <h2 id="startText">To begin, select a flavor from the sunburst chart below.</h2>
+                <!-- <h2 id="startText">Select a flavor below</h2> -->
                 <div id="sequence"></div>
                 <svg class="chart" id="chart"></svg>
                 <script type="text/javascript" src="js/wine_select.js"></script>
             </div>
         </div>
         <div class="graphcontainer" id="graphcontainer">
-            <h1>Quality of Wine Rated By Experts On Vintage Years</h1>
+            <!-- <h1>Quality of Wine Rated By Experts On Vintage Years</h1> -->
             <div class="graph"></div>
             <div id="rulescontainer"></div>
         </div>
     </div>
-    <!--         <div class="additionalinfo" style="list-style: none;">
-            <div id="memberslist">
-                <h3>Members</h3>
-                <li>Hanlin Chen</li>
-                <li>Andrew Johnson</li>
-                <li>Zihua Huang</li>
-                <li>Kevin Tran</li>
-            </div>
-            
-            <div id="classinfolist" style="list-style: none;">
-                <li>CMPS 165</li>
-                <li>Data Programming for Visualization</li>
-                <li>Spring 2018</li>
-                <li>Suresh Lodha</li>
-            </div>
-            
-            <div id="filesubmitlist" style="list-style: none;">
-
-            </div>
-            
-            <div id="resourceslist" style="list-style: none;">
-                <h3>Resources</h3>
-            </div>
-        </div> -->
     <div class="info">
         <div class="row">
             <div class="col-sm-4" style="background-color:lavender;"></div>
             <div class="col-sm-4" style="background-color:lavender;">
-                <center>CMPS 165 - Data Programming for Visualization</center>
+                <h4><center>CMPS 165</center><center>Data Programming for Visualization</center></h4>
                 <center>Spring 2018</center>
                 <center>Suresh Lodha</center>
                 <p></p>
@@ -74,28 +49,31 @@
         </div>
         <div class="row">
             <div class="col-sm-4" style="background-color:lavender;">
-                <h3>Members</h3>
-                <li>Zihua Huang</li>
-                <li>Andrew Johnson</li>
-                <li>Zihua Huang</li>
-                <li>Kevin Tran</li>
-                <li>Hanlin Chen</li>
+                <h5>Members</h5>
+                <ul class="list-unstyled">
+                    <li>Hanlin Chen</li>
+                    <li>Zihua Huang</li>
+                    <li>Andrew Johnson</li>
+                    <li>Kevin Tran</li>
+                </ul>
             </div>
             <div class="col-sm-4" style="background-color:lavender;">
-                <h3>Files submitted</h3>
-                <li>index.html</li>
-                <li>sunburst.json</li>
-                <li>WineDataSet.csv</li>
-                <li>wine_select.js</li>
-                <li>winecss.css</li>
+                <h5>Files submitted</h5>
+                <ul class="list-unstyled">
+                    <li>index.html</li>
+                    <li>sunburst.json</li>
+                    <li>WineDataSet.csv</li>
+                    <li>wine_select.js</li>
+                    <li>winecss.css</li>
+                </ul>
             </div>
             <div class="col-sm-4" style="background-color:lavender;">
-                <h3>Resource<h3>
+                <h5>Visualization Source<h5>
                 <a href ="http://bl.ocks.org/denjn5/00a57e89c67906897b6eede56219170e">http://bl.ocks.org/denjn5/00a57e89c67906897b6eede56219170e</a><br>
                 <a href ="http://bl.ocks.org/Ctuauden/52d057254665400f561ef73cb6e5841a">http://bl.ocks.org/Ctuauden/52d057254665400f561ef73cb6e5841a</a><br>
                 <a href="https://www.thewinecellarinsider.com/wine-topics/wine-educational-questions/davis-aroma-wheel/">https://www.thewinecellarinsider.com/wine-topics/wine-educational-questions/davis-aroma-wheel/</a>
                 <br>
-                data from:<br>
+                Data Source<br>
                 <a href="https://www.vivino.com/wineries/">https://www.vivino.com/wineries/</a>
                 <br>
                 <a href="https://www.kaggle.com/zynicide/wine-reviews/data/">https://www.kaggle.com/zynicide/wine-reviews/data/</a>
