@@ -38,6 +38,92 @@ $(document).ready(function(){
     var tooltip = d3.select(".graph").append("div")
                       .attr("class", "tooltip")
                       .style("opacity", 0);
+    var colors = {
+        //Parent 
+        "Fruity": "#4b0082", 
+            //Children
+            "Tree Fruit": "#61258f", 
+            "Berry":"#763f9b", 
+            "Citrus":"#8a59a7", 
+            "Dried Fruit":"#9e72b3", 
+            "Tropical":"#b28bc0", 
+            "Fresh":"#c5a4cc", 
+                //Wines
+                "Rochiloli":"#d8bfd8",
+                "Kuyam":"#d8bfd8",
+                "Schloss":"#d8bfd8",
+                "Roth":"#d8bfd8",
+                "Firesteed":"#d8bfd8",
+                "Simonnet":"#d8bfd8",
+                "Avidagos":"#d8bfd8",
+                "Graff":"#d8bfd8",
+                "Vignelaure":"#d8bfd8",
+                "Caillou":"#d8bfd8",
+                "Damilano":"#d8bfd8",
+                "Calstar":"#d8bfd8",
+                "Penfolds":"#d8bfd8",
+                "Line 39":"#d8bfd8",
+                "Manos":"#d8bfd8",
+                "Bernhard":"#d8bfd8",
+                "Magnolia":"#d8bfd8",
+                "Presuses":"#d8bfd8",
+                "De Silva":"#d8bfd8",
+                "Rochioli":"#d8bfd8",
+       
+        "Woody":"#a50f15",
+            "Cedar":"#de2d26",
+            "Coffee":"#fb6a4a",
+            "Vanilla":"#fc9272",
+            "Oak":"#fcbba1",
+                "Kirkland":"#fee5d9",
+                "Le Vigne":"#fee5d9",
+                "Petirrojo":"#fee5d9",
+                "Bink":"#fee5d9",
+                "Bodega":"#fee5d9",
+                "Peltier":"#fee5d9",
+                "Casarena":"#fee5d9",
+                "Raimat":"#fee5d9",
+                "Crossbarn":"#fee5d9",
+                "Tilia":"#fee5d9",
+                "Parallel":"#fee5d9",
+                "Ferrari":"#fee5d9",
+                "Tarara":"#fee5d9",
+     //"":"",
+        "Herbal":"#31a354 ",
+            "Fresh":"#c7e9c0",
+            "Cooked":"#a1d99b",
+            "Dried":"#74c476",
+                "Collier":"#bae4b3",
+                "Puelles":"#bae4b3",
+                "Babcock":"#bae4b3",
+                "Islands":"#bae4b3",
+       
+        "Biological":"#feb24c",
+            "Lactic":"#fff7bc",
+            "Yeasty":"#fee391",
+                "Pet Nat":"#ffffb2",
+                "Chakana":"#ffffb2",
+                "Alorna":"#ffffb2",
+
+          "Earthy": "#f768a1",
+                "Dusty":"fbb4b9",
+                    "Ceretto":"#feebe2",
+                    "Well":"#feebe2",
+          "Caramel": "#d95f0e",
+                "Molasses":"#fe9929",
+                    "Belles":"#fec44f",
+                    "Avignonsi":"#fec44f",
+
+          "Pungent":"#969696",
+                "Menthol":"#bdbdbd",
+                    "Viberti":"#d9d9d9",
+
+          "Chemical":"#4292c6",
+                "Diesel":"#9ecae1",
+                "Tar":"6baed6",
+                    "Amayna":"#9ecae1",
+                    "Fattoria":"#9ecae1"
+    };
 
   d3.csv('WineDataSet.csv', function(error, data){
       data.forEach(function(d){
@@ -179,7 +265,7 @@ function drawSunburst(data) {
     newSlice.append('path').attr("display", function(d) { return d.depth ? null : "none"; })
         .attr("d", arc)
         .style('stroke', '#fff')
-        .style("fill", function(d) { return color((d.children ? d : d.parent).data.name); });
+        .style("fill", function(d) { return colors[d.data.name]; })
     // Populate the <text> elements with our data-driven titles.
     slice.selectAll('text').remove();
     newSlice.append("text")
