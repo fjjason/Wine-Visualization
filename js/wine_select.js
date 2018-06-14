@@ -177,8 +177,8 @@ $(document).ready(function() {
 
         chartsvg
             .append('text')
-            .attr('x', width)
-            .attr('y', height - 10)
+            .attr('x', 550)
+            .attr('y', height - 50)
             .attr('text-anchor', 'end')
             .attr('class', 'label')
             .text('Taste Rating');
