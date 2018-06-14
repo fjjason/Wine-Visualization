@@ -3,6 +3,9 @@ body {
     font-family: sans-serif;
     background-color: #F0F8FF;
 }
+a {                                             
+    font: 16px sans-serif;
+}
 .tooltip {
     position: absolute;          
     width: 225px;                                                    

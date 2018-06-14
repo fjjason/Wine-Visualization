@@ -37,7 +37,7 @@
                 }]
             },
             {
-                "name": "Fresh",
+                "name": "Fresh (F)",
                 "id": "wine fruity fresh",
                 "children": [
                 {
@@ -262,7 +262,7 @@
                     }]
                 },
                 {
-                    "name": "Fresh",
+                    "name": "Fresh (H)",
                     "id": "wine herbal fresh",
                     "children": [
                         {
