@@ -12,27 +12,27 @@
                 "children": [
                 {
                     "name": "Avidagos",
-                    "id": "wine fruity berry Quinta dos Avidagos 2011 Avidagos Red (Douro)",
+                    "id": "Quinta dos Avidagos 2011 Avidagos Red (Douro)",
                     "fullname": "Quinta dos Avidagos 2011 Avidagos Red (Douro)"
                 },
                 {
                     "name": "Graff",
-                    "id": "wine fruity berry Delaire Graff 2013 Reserve White (Coastal Region)",
+                    "id": "Delaire Graff 2013 Reserve White (Coastal Region)",
                     "fullname": "Delaire Graff 2013 Reserve White (Coastal Region)"
                 },
                 {
                     "name": "Vignelaure",
-                    "id": "wine fruity berry Chateau Vignelaure 2015 Rose (Coteaux d'Aix-en-Provence)",
+                    "id": "Chateau Vignelaure 2015 Rose (Coteaux d'Aix-en-Provence)",
                     "fullname": "Chateau Vignelaure 2015 Rose (Coteaux d'Aix-en-Provence)"
                 },
                 {
                     "name": "Caillou",
-                    "id": "wine fruity berry Chateau Vrai Caillou 2014 Bordeaux Suparieur",
+                    "id": "Chateau Vrai Caillou 2014 Bordeaux Suparieur",
                     "fullname": "Chateau Vrai Caillou 2014 Bordeaux Suparieur"
                 },
                 {
                     "name": "Damilano",
-                    "id": "wine fruity berry Damilano 2011 Cannubi (Barolo)",
+                    "id": "Damilano 2011 Cannubi (Barolo)",
                     "fullname": "Damilano 2011 Cannubi (Barolo)"
                 }]
             },
@@ -42,7 +42,7 @@
                 "children": [
                 {
                     "name": "De Silva",
-                    "id": "wine fruity fresh Tenuta Peter Salva & Sahne 2007 De Silva Sauvignon (Alto Adige)",
+                    "id": "Tenuta Peter Salva & Sahne 2007 De Silva Sauvignon (Alto Adige)",
                     "fullname": "Tenuta Peter Salva & Sahne 2007 De Silva Sauvignon (Alto Adige)"
                 }]
             },
@@ -52,11 +52,12 @@
                 "children": [
                 {
                     "name": "Manos",
-                    "id": "wine fruity dried fruit Cueva de las Manos 2007 Reserve Malbec (LujÃ¡n de Cuyo)",
+                    "id": "Cueva de las Manos 2007 Reserve Malbec (LujÃ¡n de Cuyo)",
                     "fullname": "Cueva de las Manos 2007 Reserve Malbec (LujÃ¡n de Cuyo)"
                 },
                 {
                     "name": "Bernhard",
+                    "id": "wine fruity dried fruit Jean-Marc Bernhard 2013 Wineck-Schlossberg Grand Cru Riesling (Alsace)",
                     "fullname": "Jean-Marc Bernhard 2013 Wineck-Schlossberg Grand Cru Riesling (Alsace)"
                 }]
             },
@@ -132,7 +133,7 @@
             }]
         },
         {
-            "name": "earthy",
+            "name": "Earthy",
             "id": "wine earthy",
             "children": [
             {
@@ -188,11 +189,11 @@
         },
         {
             "name": "Biological",
-            "id": "wine mirobiological",
+            "id": "wine microbiological",
             "children": [
                 {
                     "name": "Yeasty",
-                    "id": "wine mirobiological yeasty",
+                    "id": "wine microbiological yeasty",
                     "children": [
                     {
                         "name": "Pet Nat",
@@ -202,7 +203,7 @@
                 },
                 {
                     "name": "Lactic",
-                    "id": "wine mirobiological lactic",
+                    "id": "wine microbiological lactic",
                     "children": [
                         {
                             "name": "Alorna",
