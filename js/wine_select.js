@@ -87,7 +87,7 @@ $(document).ready(function(){
           .data(data)
           .enter().append("circle")
           .attr("class", "dot")
-          .attr("r", function(d) { return 5; })
+          .attr("r", function(d) { return 7; })
           .attr("cx", function(d) {return x(d.points);})
           .attr("cy", function(d) {return y(d.year);})
           .style("fill", function (d) { return color(d.primary); })
@@ -95,14 +95,14 @@ $(document).ready(function(){
               tooltip.transition()
               .duration(200)
               .style("opacity", 1);
-              tooltip.html( d.title + 
-                  "<br/>" + "Vintage Year:" + d.year1 + 
-                  "<br/>" + "Price(USD): $" + d.price + 
-                  "<br/>" + "Variety: " + d.variety + 
-                  "<br/>" + "Place of Origin: " + d.country + " ("+d.province + ") "+  
-                  "<br/> " + "Expert Grade(out of 100pts): " + d.points + "")
-              .style("left", (d3.event.pageX -120) + "px")
-              .style("top", (d3.event.pageY-30) + "px");
+              tooltip.html(d.title.bold() + 
+              	  "<hr><b>Vintage Year:</b> " + d.year1 + 
+                  "<br/><b>Price:</b> $" + d.price + 
+                  "<br/><b>Variety:</b> " + d.variety + 
+                  "<br/><b>Origin: </b>" + d.country + " ("+d.province + ") "+  
+                  "<br/><b>Rating (80-100):</b> " + d.points + "")
+              .style("left", (d3.event.pageX - 240) + "px")
+              .style("top", (d3.event.pageY) + "px");
           })
           .on("mouseout", function(d) {
               tooltip.transition()

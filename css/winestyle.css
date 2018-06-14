@@ -4,17 +4,17 @@ body {
     background-color: #F0F8FF;
 }
 .tooltip {
+    opacity: 0.3;
     position: absolute;             
-    width: 200px;                                                    
+    width: 225px;                                                    
     font: 12px sans-serif;
-    font-weight: bold;
     background: white; 
     border-style: solid;
     border-color: #A80000 ;        
-    border-radius: 5px;         
+    border-radius: 10px 0px 10px 10px;
+    border-width: 1px;         
     pointer-events: none;
-    padding-top: 5px;
-    padding-left: 5px;
+    padding: 5px 5px 5px 5px;
 }
 
 .image {
