@@ -59,9 +59,8 @@ a {
 }
 
 .sun {
-     z-index: 0;
+    z-index: 0;
     width: 60%;
-    height: 10000px;
     text-align: center;
 }
 .optioncontainer {
@@ -72,6 +71,7 @@ a {
     background-color:#CCFFFF;
     font-size: 12px;
     border-top: 2px solid #ddd;
+    border-color: transparent;
 }
 
 
@@ -100,6 +100,7 @@ a {
     float: right;
     background-color: #CCFFFF;
     border-top: 2px solid #ddd;
+    border-color: transparent;
 }
 
 path{

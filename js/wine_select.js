@@ -38,91 +38,91 @@ $(document).ready(function() {
         .attr('class', 'tooltip')
         .style('opacity', 0);
 
-	var colors = {
-        //Parent 
-        "Fruity": "#4b0082", 
-            //Children
-            "Tree Fruit": "#61258f", 
-            "Berry":"#763f9b", 
-            "Citrus":"#8a59a7", 
-            "Dried Fruit":"#9e72b3", 
-            "Tropical":"#b28bc0", 
-            "Fresh (F)":"#c5a4cc", 
-                //Wines
-                "Rochiloli":"#d8bfd8",
-                "Kuyam":"#d8bfd8",
-                "Schloss":"#d8bfd8",
-                "Roth":"#d8bfd8",
-                "Firesteed":"#d8bfd8",
-                "Simonnet":"#d8bfd8",
-                "Avidagos":"#d8bfd8",
-                "Graff":"#d8bfd8",
-                "Vignelaure":"#d8bfd8",
-                "Caillou":"#d8bfd8",
-                "Damilano":"#d8bfd8",
-                "Calstar":"#d8bfd8",
-                "Penfolds":"#d8bfd8",
-                "Line 39":"#d8bfd8",
-                "Manos":"#d8bfd8",
-                "Bernhard":"#d8bfd8",
-                "Magnolia":"#d8bfd8",
-                "Presuses":"#d8bfd8",
-                "De Silva":"#d8bfd8",
-                "Rochioli":"#d8bfd8",
-       
-        "Woody":"#cb181d",
-            "Cedar":"#ef3b2c",
-            "Coffee":"#fb6a4a",
-            "Vanilla":"#fc9272",
-            "Oak":"#fcbba1",
-                "Kirkland":"#fee0d2",
-                "Le Vigne":"#fee0d2",
-                "Petirrojo":"#fee0d2",
-                "Bink":"#fee0d2",
-                "Bodega":"#fee0d2",
-                "Peltier":"#fee0d2",
-                "Casarena":"#fee0d2",
-                "Raimat":"#fee0d2",
-                "Crossbarn":"#fee0d2",
-                "Tilia":"#fee0d2",
-                "Parallel":"#fee0d2",
-                "Ferrari":"#fee0d2",
-                "Tarara":"#fee0d2",
-     //"":"",
-        "Herbal":"#31a354 ",
-            "Fresh (H)":"#c7e9c0",
-            "Cooked":"#a1d99b",
-            "Dried":"#74c476",
-                "Collier":"#bae4b3",
-                "Puelles":"#bae4b3",
-                "Babcock":"#bae4b3",
-                "Islands":"#bae4b3",
-       
-        "Biological":"#feb24c",
-            "Lactic":"#fff7bc",
-            "Yeasty":"#fee391",
-                "Pet Nat":"#ffffb2",
-                "Chakana":"#ffffb2",
-                "Alorna":"#ffffb2",
+    var colors = {
+        //Parent
+        Fruity: '#4b0082',
+        //Children
+        'Tree Fruit': '#61258f',
+        Berry: '#763f9b',
+        Citrus: '#8a59a7',
+        'Dried Fruit': '#9e72b3',
+        Tropical: '#b28bc0',
+        'Fresh (F)': '#c5a4cc',
+        //Wines
+        Rochiloli: '#d8bfd8',
+        Kuyam: '#d8bfd8',
+        Schloss: '#d8bfd8',
+        Roth: '#d8bfd8',
+        Firesteed: '#d8bfd8',
+        Simonnet: '#d8bfd8',
+        Avidagos: '#d8bfd8',
+        Graff: '#d8bfd8',
+        Vignelaure: '#d8bfd8',
+        Caillou: '#d8bfd8',
+        Damilano: '#d8bfd8',
+        Calstar: '#d8bfd8',
+        Penfolds: '#d8bfd8',
+        'Line 39': '#d8bfd8',
+        Manos: '#d8bfd8',
+        Bernhard: '#d8bfd8',
+        Magnolia: '#d8bfd8',
+        Presuses: '#d8bfd8',
+        'De Silva': '#d8bfd8',
+        Rochioli: '#d8bfd8',
 
-          "Earthy": "#f768a1",
-                "Dusty":"#fbb4b9",
-                    "Ceretto":"#feebe2",
-                    "Well":"#feebe2",
-          "Caramel": "#d95f0e",
-                "Molasses":"#fe9929",
-                    "Belles":"#fec44f",
-                    "Avignonsi":"#fec44f",
+        Woody: '#cb181d',
+        Cedar: '#ef3b2c',
+        Coffee: '#fb6a4a',
+        Vanilla: '#fc9272',
+        Oak: '#fcbba1',
+        Kirkland: '#fee0d2',
+        'Le Vigne': '#fee0d2',
+        Petirrojo: '#fee0d2',
+        Bink: '#fee0d2',
+        Bodega: '#fee0d2',
+        Peltier: '#fee0d2',
+        Casarena: '#fee0d2',
+        Raimat: '#fee0d2',
+        Crossbarn: '#fee0d2',
+        Tilia: '#fee0d2',
+        Parallel: '#fee0d2',
+        Ferrari: '#fee0d2',
+        Tarara: '#fee0d2',
+        //"":"",
+        Herbal: '#31a354 ',
+        'Fresh (H)': '#c7e9c0',
+        Cooked: '#a1d99b',
+        Dried: '#74c476',
+        Collier: '#bae4b3',
+        Puelles: '#bae4b3',
+        Babcock: '#bae4b3',
+        Islands: '#bae4b3',
 
-          "Pungent":"#969696",
-                "Menthol":"#bdbdbd",
-                    "Viberti":"#d9d9d9",
+        Biological: '#feb24c',
+        Lactic: '#fff7bc',
+        Yeasty: '#fee391',
+        'Pet Nat': '#ffffb2',
+        Chakana: '#ffffb2',
+        Alorna: '#ffffb2',
 
-          "Chemical":"#4292c6",
-                "Diesel":"#6baed6",
-                "Tar":"#3685b0",
-                    "Amayna":"#9ecae1",
-                    "Fattoria":"#9ecae1"
+        Earthy: '#f768a1',
+        Dusty: '#fbb4b9',
+        Ceretto: '#feebe2',
+        Well: '#feebe2',
+        Caramel: '#d95f0e',
+        Molasses: '#fe9929',
+        Belles: '#fec44f',
+        Avignonsi: '#fec44f',
+
+        Pungent: '#969696',
+        Menthol: '#bdbdbd',
+        Viberti: '#d9d9d9',
+
+        Chemical: '#4292c6',
+        Diesel: '#6baed6',
+        Tar: '#3685b0',
+        Amayna: '#9ecae1',
+        Fattoria: '#9ecae1'
     };
 
     d3.csv('WineDataSet.csv', function(error, data) {
@@ -216,22 +216,12 @@ $(document).ready(function() {
                 tooltip
                     .html(
                         d.title.bold() +
-                            '<hr><b>Vintage:</b> ' +
-                            d.year1 +
-                            '<br/><b>Price:</b> $' +
-                            d.price +
-                            '<br/><b>Variety:</b> ' +
-                            d.variety +
-                            '<br/><b>Origin: </b>' +
-                            d.country +
-                            ' (' +
-                            d.province +
-                            ') ' +
-                            '<br/><b>Rating (80-100):</b> ' +
-                            d.points +
-                            '<br/><b>Pairings:</b> ' +
-                            d.pair +
-                            ''
+                            '<hr style="text-algin: left; margin: 0px; padding: 0px"><p style="text-algin: left; margin: 0px; padding: 0px" >Vintage' + '<span style="position: absolute; left: 50%;" >'+':'+'</span> '+'<span style="float: right" >'+d.year1+'</span></p> ' +
+                            '<hr style="text-algin: left; margin: 0px; padding: 0px"><p style="text-algin: left; margin: 0px; padding: 0px" >Price' + '<span style="position: absolute; left: 50%;" >'+':'+'</span> '+'<span style="float: right" >'+d.variety+'</span></p> ' +
+                            '<hr style="text-algin: left; margin: 0px; padding: 0px"><p style="text-algin: left; margin: 0px; padding: 0px" >Variety' + '<span style="position: absolute; left: 50%;" >'+':'+'</span> '+'<span style="float: right" >'+d.country+'</span></p> ' +
+                            '<hr style="text-algin: left; margin: 0px; padding: 0px"><p style="text-algin: left; margin: 0px; padding: 0px" >Origin' + '<span style="position: absolute; left: 50%;" >'+':'+'</span> '+'<span style="float: right" >'+d.province+'</span></p> ' +
+                            '<hr style="text-algin: left; margin: 0px; padding: 0px"><p style="text-algin: left; margin: 0px; padding: 0px" >Rating' + '<span style="position: absolute; left: 50%;" >'+':'+'</span> '+'<span style="float: right" >'+d.points+'</span></p> ' +
+                            '<hr style="text-algin: left; margin: 0px; padding: 0px"><p style="text-algin: left; margin: 0px; padding: 0px" >Pairings' + '<span style="position: absolute; left: 50%;" >'+':'+'</span> '+'<span style="float: right" >'+d.pair+'</span></p> '
                     )
                     .style('left', d3.event.pageX - 230 + 'px')
                     .style('top', d3.event.pageY -120 + 'px');
@@ -335,7 +325,6 @@ $(document).ready(function() {
             .style('stroke', '#fff')
             .style('fill', function(d) {
                 return colors[d.data.name];
-
             });
         // .style("fill", function(d) { return color((d.children ? d : d.parent).data.name); });
         // Populate the <text> elements with our data-driven titles.
@@ -374,17 +363,12 @@ $(document).ready(function() {
             .duration(750)
             .attrTween('transform', arcTweenText);
 
-
-
-        g.append("svg:image")
+      g.append("svg:image")
         .attr('x', -35)
         .attr('y', -35)
         .attr('width', 70)
         .attr('height', 70)
-        .attr("xlink:href", "grape.png")
-
-
-
+        .attr("xlink:href", "grape.png");
     }
     // d3.selectAll(".showSelect").on("click", showTopTopics);
     // d3.selectAll(".sizeSelect").on("click", sliceSizer);
@@ -498,7 +482,6 @@ $(document).ready(function() {
             return arc(b);
         }
         return tween;
-
     }
     /**
      * When switching data: interpolate the text centroids and rotation.
@@ -533,4 +516,3 @@ $(document).ready(function() {
         return angle < 180 ? angle - 90 : angle + 90; // labels as spokes
     }
 });
-
