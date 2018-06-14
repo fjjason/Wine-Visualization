@@ -1,4 +1,4 @@
-
+// CHART CODE HERE
 $(document).ready(function(){
   var margin = {top: 20, right: 80, bottom: 30, left: 50},
       width = 600 - margin.left - margin.right,
@@ -118,10 +118,8 @@ $(document).ready(function(){
   });
 
 
-//sunburst
-//sunburst
-//sunburst
-//sunburst
+// SUNBURST CODE HERE
+
 // Variables
 var allNodes;
 var width = 700;
@@ -185,9 +183,9 @@ function drawSunburst(data) {
         .attr("transform", function(d) {
             return "translate(" + arc.centroid(d) + ")rotate(" + computeTextRotation(d) + ")";
         })
-        .attr("dx", "-20")
-        .attr("dy", ".5em")
-        .style("font-size", "10px")
+        .attr("dx", "-30")
+        .attr("dy", ".4em")
+        .style("font-size", "13px")
         .text(function(d) { return d.parent ? d.data.name : "" });
     newSlice.on("click", highlightSelectedSlice);
     root.count();
@@ -292,7 +290,8 @@ function arcTweenText(a, i) {
 function computeTextRotation(d) {
     var angle = (d.x0 + d.x1) / Math.PI * 90;
     // Avoid upside-down labels
-    return (angle < 120 || angle > 270) ? angle : angle + 180; // labels as rims
+    (angle < 120 || angle > 270) ? angle : angle + 180; 
+    return angle + 90// labels as rims
     //return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
 }
 

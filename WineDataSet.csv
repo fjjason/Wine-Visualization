@@ -1,4 +1,5 @@
 country,primary,secondary,points,price,province,title,year,variety,winery
+
 Portugal,fruity,berry,87,15,Douro,Quinta dos Avidagos 2011 Avidagos Red (Douro),2011,Portuguese Red,Quinta dos Avidagos
 US,woody,oak,86,40,Virginia,Tarara 2010 #SocialSecret Red (Virginia),2010,Red Blend,Tarara
 US,woody,oak,88,23,California,Ferrari-Carano 2014 Siena Red (Sonoma County),2014,Red Blend,Ferrari-Carano
@@ -24,7 +25,7 @@ US,fruity,tropical fruit,82,13,California,Magnolia Court 2012 Sauvignon Blanc (C
 US,woody,vanilla,89,18,California,Bink 2013 Lumineux Rose (Yorkville Highlands),2013,Rose,Bink
 Italy,pungent,menthol,91,105,Piedmont,Viberti 2007 La Volta Riserva  (Barolo),2007,Nebbiolo,Viberti
 US,fruity,tree fruit,90,19,California,Kuyam 2008 Thirteen Moons Red (Santa Barbara County),2008,Bordeaux-style Red Blend,Kuyam
-France,fruity,berry,87,15,Bordeaux,Chateau Vrai Caillou 2014  Bordeaux Suparieur,2014,Bordeaux-style Red Blend,Chateau Vrai Caillou
+France,fruity,berry,87,15,Bordeaux,Chateau Vrai Caillou 2014 Bordeaux Suparieur,2014,Bordeaux-style Red Blend,Chateau Vrai Caillou
 Chile,woody,vanilla,83,8,Colchagua Valley,Via Bisquertt 2014 Petirrojo Reserva Estate Grown Cabernet Sauvignon (Colchagua Valley),2014,Cabernet Sauvignon,Via Bisquertt
 Germany,fruity,tree fruit,93,55,Rheingau,Schloss Johannisberger 2012 Granlock Spatlese Riesling (Rheingau),2012,Riesling,Schloss Johannisberger
 US,microbiological,yeasty,92,25,California,Ancestrale 2016 Pet Nat Method Ancestral Bassi Vineyard Pinot Noir (San Luis Obispo County),2016,Pinot Noir,Ancestrale

@@ -96,7 +96,7 @@
                 }]
             },
             {
-                "name": "Tropical Fruit",
+                "name": "Tropical",
                 "id": "wine fruity tropical fruit",
                 "children": [
                 {
@@ -187,7 +187,7 @@
             }]
         },
         {
-            "name": "Microbiological",
+            "name": "Biological",
             "id": "wine mirobiological",
             "children": [
                 {
