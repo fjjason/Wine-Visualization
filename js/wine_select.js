@@ -234,7 +234,7 @@ $(document).ready(function() {
                             ''
                     )
                     .style('left', d3.event.pageX - 230 + 'px')
-                    .style('top', d3.event.pageY + 'px');
+                    .style('top', d3.event.pageY -120 + 'px');
             })
             .on('mouseout', function(d) {
                 tooltip
