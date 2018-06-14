@@ -38,7 +38,6 @@ $(document).ready(function() {
         .attr('class', 'tooltip')
         .style('opacity', 0);
 
-
 	var colors = {
         //Parent 
         "Fruity": "#4b0082", 
@@ -332,6 +331,7 @@ $(document).ready(function() {
             .style('stroke', '#fff')
             .style('fill', function(d) {
                 return colors[d.data.name];
+
             });
         // .style("fill", function(d) { return color((d.children ? d : d.parent).data.name); });
         // Populate the <text> elements with our data-driven titles.
@@ -369,6 +369,7 @@ $(document).ready(function() {
             .transition()
             .duration(750)
             .attrTween('transform', arcTweenText);
+
     }
     // d3.selectAll(".showSelect").on("click", showTopTopics);
     // d3.selectAll(".sizeSelect").on("click", sliceSizer);
@@ -466,6 +467,7 @@ $(document).ready(function() {
         );
         drawSunburst(showNodes);
     }
+
     /**
      * When switching data: interpolate the arcs in data space.
      * @param {Node} a
@@ -481,6 +483,7 @@ $(document).ready(function() {
             return arc(b);
         }
         return tween;
+
     }
     /**
      * When switching data: interpolate the text centroids and rotation.
@@ -515,3 +518,4 @@ $(document).ready(function() {
         return angle < 180 ? angle - 90 : angle + 90; // labels as spokes
     }
 });
+
