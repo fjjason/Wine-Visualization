@@ -1,6 +1,6 @@
 // CHART CODE HERE
 $(document).ready(function() {
-    var margin = { top: 20, right: 80, bottom: 30, left: 50 },
+    var margin = { top: 40, right: 50, bottom: 30, left: 50 },
         width = 600 - margin.left - margin.right,
         height = 600 - margin.top - margin.bottom;
 
@@ -158,27 +158,30 @@ $(document).ready(function() {
 
         chartsvg
             .append('g')
-            .attr('transform', 'translate(-1,' + (height - 45) + ')')
+            .attr('transform', 'translate(21,' + (height/1.2+15) + ')')
             .attr('class', 'x axis')
             .call(xAxis);
 
         chartsvg
             .append('g')
-            .attr('transform', 'translate(-7,0)')
+            .attr('transform', 'translate(15,-19)')
             .attr('class', 'y axis')
             .call(yAxis);
 
         chartsvg
             .append('text')
-            .attr('x', 10)
-            .attr('y', 10)
+            .attr('x', -320)
+            .attr('y', -34)
+            .style("font-size", "21px")
             .attr('class', 'label')
+            .attr("transform", "rotate(-90)")
             .text('Vintage Year');
 
         chartsvg
             .append('text')
-            .attr('x', width)
-            .attr('y', height - 10)
+            .attr('x', (width/2.1))
+            .attr('y', (height-50))
+            .style("font-size", "20px")
             .attr('text-anchor', 'end')
             .attr('class', 'label')
             .text('Taste Rating');
@@ -191,6 +194,7 @@ $(document).ready(function() {
             .data(data)
             .enter()
             .append('circle')
+            .attr('transform', 'translate(22,-21)')
             .attr('class', 'dot')
             .attr('r', function(d) {
                 return 7;
