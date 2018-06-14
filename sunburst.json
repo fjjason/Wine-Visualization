@@ -32,7 +32,7 @@
                 },
                 {
                     "name": "Damilano",
-                    "id": "wine fruity berry Damilano 2011 Cannubi (Barolo)",
+                    "id": "Damilano 2011 Cannubi (Barolo)",
                     "fullname": "Damilano 2011 Cannubi (Barolo)"
                 }]
             },
@@ -42,7 +42,7 @@
                 "children": [
                 {
                     "name": "De Silva",
-                    "id": "wine fruity fresh Tenuta Peter Salva & Sahne 2007 De Silva Sauvignon (Alto Adige)",
+                    "id": "Tenuta Peter Salva & Sahne 2007 De Silva Sauvignon (Alto Adige)",
                     "fullname": "Tenuta Peter Salva & Sahne 2007 De Silva Sauvignon (Alto Adige)"
                 }]
             },
@@ -52,8 +52,8 @@
                 "children": [
                 {
                     "name": "Manos",
-                    "id": "wine fruity dried fruit Cueva de las Manos 2007 Reserve Malbec (LujÃ¡n de Cuyo)",
-                    "fullname": "Cueva de las Manos 2007 Reserve Malbec (Lujan de Cuyo)"
+                    "id": "Cueva de las Manos 2007 Reserve Malbec (LujÃ¡n de Cuyo)",
+                    "fullname": "Cueva de las Manos 2007 Reserve Malbec (LujÃ¡n de Cuyo)"
                 },
                 {
                     "name": "Bernhard",
@@ -92,8 +92,8 @@
                 },
                 {
                     "name": "Simonnet",
-                    "id": "wine fruity tree fruit Simonnet-Febvre 2011 Bourgogne Vazelay",
-                    "fullname": "Simonnet-Febvre 2011 Bourgogne Vazelay"
+                    "id": "wine fruity tree fruit Simonnet-Febvre 2011  Bourgogne VÃ©zelay",
+                    "fullname": "Simonnet-Febvre 2011  Bourgogne VÃ©zelay"
                 }]
             },
             {
@@ -143,12 +143,12 @@
                 {
                     "name": "Ceretto",
                     "id": "wine earthy dusty Ceretto 2003 Bricco Rocche Prapa  (Barolo)",
-                    "fullname": "Ceretto 2003 Bricco Rocche Prapa (Barolo)"
+                    "fullname": "Ceretto 2003 Bricco Rocche Prapa  (Barolo)"
                 },
                 {
                     "name": "Well",
                     "id": "wine earthy dusty Robert Weil 2014 Kiedrich GrÃ¤fenberg Trockenbeerenauslese Riesling (Rheingau)",
-                    "fullname": "Robert Weil 2014 Kiedrich Grafenberg Trockenbeerenauslese Riesling (Rheingau)"
+                    "fullname": "Robert Weil 2014 Kiedrich GrÃ¤fenberg Trockenbeerenauslese Riesling (Rheingau)"
                 }]
             }]
         },
@@ -167,8 +167,8 @@
                 },
                 {
                     "name": "Avignonsi",
-                    "id": "wine caramel molasses Avignonesi 1995 Occhio di Pernice (Vin Santo di Montepulciano)",
-                    "fullname": "Avignonesi 1995 Occhio di Pernice (Vin Santo di Montepulciano)"
+                    "id": "wine caramel molasses Avignonesi 1995 Occhio di Pernice  (Vin Santo di Montepulciano)",
+                    "fullname": "Avignonesi 1995 Occhio di Pernice  (Vin Santo di Montepulciano)"
                 }]
             }]
         },
@@ -182,8 +182,8 @@
                 "children": [
                 {
                     "name": "Viberti",
-                    "id": "wine pungent menthol Viberti 2007 La Volta Riserva (Barolo)",
-                    "fullname": "Viberti 2007 La Volta Riserva (Barolo)"
+                    "id": "wine pungent menthol Viberti 2007 La Volta Riserva  (Barolo)",
+                    "fullname": "Viberti 2007 La Volta Riserva  (Barolo)"
                 }]
             }]
         },
@@ -232,8 +232,8 @@
                     "children": [
                     {
                         "name": "Puelles",
-                        "id": "wine herbal cooked Puelles 2004 Reserva (Rioja)",
-                        "fullname": "Puelles 2004 Reserva (Rioja)"
+                        "id": "wine herbal cooked Puelles 2004 Reserva  (Rioja)",
+                        "fullname": "Puelles 2004 Reserva  (Rioja)"
                     }]
                 },
                 {
