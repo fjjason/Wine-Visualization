@@ -4,7 +4,6 @@ body {
     background-color: #F0F8FF;
 }
 .tooltip {
-    opacity: 0;
     position: absolute;          
     width: 225px;                                                    
     font: 12px sans-serif;

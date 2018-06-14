@@ -206,18 +206,28 @@ function highlightSelectedSlice(c, i) {
     var rootPath = clicked.path(root).reverse();
     rootPath.shift(); // remove root node from the array
     newSlice.style("opacity", 0.4);
-    circles.style("opacity", .04);
     // console.log(rootPath)
+    circles.style("visibility", "hidden");
     newSlice.filter(function(d) {
             if (d == clicked && d.prevClicked) {
                 d.prevClicked = false;
                 newSlice.style("opacity", 1);
-                circles.style("opacity", 1);
+                circles.style("visibility", "visible");
                 return true;
             } else if (d == clicked) {
                 d.prevClicked = true;
                 // THIS IS WHERE WE FILTER INDIVIDUAL DOTS
+                circles.each(function() {
+                	var cur = d3.select(this)
+                	console.log(d.data.id);
+                	console.log(cur.data()[0].primary);
+                	console.log(d.data.id.includes(cur.data()[0].primary))
+                	console.log("---")
 
+                	if(d.data.id.includes(cur.data()[0].primary)) {
+                		cur.style("visibility", "visible");
+                	}
+                });
                 // HERE
                 return true;
             } else {

@@ -57,6 +57,7 @@
                 },
                 {
                     "name": "Bernhard",
+                    "id": "wine fruity dried fruit Jean-Marc Bernhard 2013 Wineck-Schlossberg Grand Cru Riesling (Alsace)",
                     "fullname": "Jean-Marc Bernhard 2013 Wineck-Schlossberg Grand Cru Riesling (Alsace)"
                 }]
             },
@@ -132,7 +133,7 @@
             }]
         },
         {
-            "name": "earthy",
+            "name": "Earthy",
             "id": "wine earthy",
             "children": [
             {
@@ -188,11 +189,11 @@
         },
         {
             "name": "Biological",
-            "id": "wine mirobiological",
+            "id": "wine microbiological",
             "children": [
                 {
                     "name": "Yeasty",
-                    "id": "wine mirobiological yeasty",
+                    "id": "wine microbiological yeasty",
                     "children": [
                     {
                         "name": "Pet Nat",
@@ -202,7 +203,7 @@
                 },
                 {
                     "name": "Lactic",
-                    "id": "wine mirobiological lactic",
+                    "id": "wine microbiological lactic",
                     "children": [
                         {
                             "name": "Alorna",
