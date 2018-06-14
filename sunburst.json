@@ -12,22 +12,22 @@
                 "children": [
                 {
                     "name": "Avidagos",
-                    "id": "wine fruity berry Quinta dos Avidagos 2011 Avidagos Red (Douro)",
+                    "id": "Quinta dos Avidagos 2011 Avidagos Red (Douro)",
                     "fullname": "Quinta dos Avidagos 2011 Avidagos Red (Douro)"
                 },
                 {
                     "name": "Graff",
-                    "id": "wine fruity berry Delaire Graff 2013 Reserve White (Coastal Region)",
+                    "id": "Delaire Graff 2013 Reserve White (Coastal Region)",
                     "fullname": "Delaire Graff 2013 Reserve White (Coastal Region)"
                 },
                 {
                     "name": "Vignelaure",
-                    "id": "wine fruity berry Chateau Vignelaure 2015 Rose (Coteaux d'Aix-en-Provence)",
+                    "id": "Chateau Vignelaure 2015 Rose (Coteaux d'Aix-en-Provence)",
                     "fullname": "Chateau Vignelaure 2015 Rose (Coteaux d'Aix-en-Provence)"
                 },
                 {
                     "name": "Caillou",
-                    "id": "wine fruity berry Chateau Vrai Caillou 2014 Bordeaux Suparieur",
+                    "id": "Chateau Vrai Caillou 2014 Bordeaux Suparieur",
                     "fullname": "Chateau Vrai Caillou 2014 Bordeaux Suparieur"
                 },
                 {
@@ -53,7 +53,7 @@
                 {
                     "name": "Manos",
                     "id": "wine fruity dried fruit Cueva de las Manos 2007 Reserve Malbec (LujÃ¡n de Cuyo)",
-                    "fullname": "Cueva de las Manos 2007 Reserve Malbec (LujÃ¡n de Cuyo)"
+                    "fullname": "Cueva de las Manos 2007 Reserve Malbec (Lujan de Cuyo)"
                 },
                 {
                     "name": "Bernhard",
@@ -92,8 +92,8 @@
                 },
                 {
                     "name": "Simonnet",
-                    "id": "wine fruity tree fruit Simonnet-Febvre 2011  Bourgogne VÃ©zelay",
-                    "fullname": "Simonnet-Febvre 2011  Bourgogne VÃ©zelay"
+                    "id": "wine fruity tree fruit Simonnet-Febvre 2011 Bourgogne Vazelay",
+                    "fullname": "Simonnet-Febvre 2011 Bourgogne Vazelay"
                 }]
             },
             {
@@ -143,12 +143,12 @@
                 {
                     "name": "Ceretto",
                     "id": "wine earthy dusty Ceretto 2003 Bricco Rocche Prapa  (Barolo)",
-                    "fullname": "Ceretto 2003 Bricco Rocche Prapa  (Barolo)"
+                    "fullname": "Ceretto 2003 Bricco Rocche Prapa (Barolo)"
                 },
                 {
                     "name": "Well",
                     "id": "wine earthy dusty Robert Weil 2014 Kiedrich GrÃ¤fenberg Trockenbeerenauslese Riesling (Rheingau)",
-                    "fullname": "Robert Weil 2014 Kiedrich GrÃ¤fenberg Trockenbeerenauslese Riesling (Rheingau)"
+                    "fullname": "Robert Weil 2014 Kiedrich Grafenberg Trockenbeerenauslese Riesling (Rheingau)"
                 }]
             }]
         },
@@ -167,8 +167,8 @@
                 },
                 {
                     "name": "Avignonsi",
-                    "id": "wine caramel molasses Avignonesi 1995 Occhio di Pernice  (Vin Santo di Montepulciano)",
-                    "fullname": "Avignonesi 1995 Occhio di Pernice  (Vin Santo di Montepulciano)"
+                    "id": "wine caramel molasses Avignonesi 1995 Occhio di Pernice (Vin Santo di Montepulciano)",
+                    "fullname": "Avignonesi 1995 Occhio di Pernice (Vin Santo di Montepulciano)"
                 }]
             }]
         },
@@ -182,8 +182,8 @@
                 "children": [
                 {
                     "name": "Viberti",
-                    "id": "wine pungent menthol Viberti 2007 La Volta Riserva  (Barolo)",
-                    "fullname": "Viberti 2007 La Volta Riserva  (Barolo)"
+                    "id": "wine pungent menthol Viberti 2007 La Volta Riserva (Barolo)",
+                    "fullname": "Viberti 2007 La Volta Riserva (Barolo)"
                 }]
             }]
         },
@@ -232,8 +232,8 @@
                     "children": [
                     {
                         "name": "Puelles",
-                        "id": "wine herbal cooked Puelles 2004 Reserva  (Rioja)",
-                        "fullname": "Puelles 2004 Reserva  (Rioja)"
+                        "id": "wine herbal cooked Puelles 2004 Reserva (Rioja)",
+                        "fullname": "Puelles 2004 Reserva (Rioja)"
                     }]
                 },
                 {

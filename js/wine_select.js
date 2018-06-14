@@ -219,12 +219,18 @@ function highlightSelectedSlice(c, i) {
                 // THIS IS WHERE WE FILTER INDIVIDUAL DOTS
                 circles.each(function() {
                 	var cur = d3.select(this)
-                	console.log(d.data.id);
+                	console.log(d.data.name);
                 	console.log(cur.data()[0].primary);
-                	console.log(d.data.id.includes(cur.data()[0].primary))
+                	console.log(d.data.name.includes(cur.data()[0].primary))
                 	console.log("---")
 
-                	if(d.data.id.includes(cur.data()[0].primary)) {
+                	if(d.data.name == cur.data()[0].primary) {
+                		cur.style("visibility", "visible");
+                	}
+                	else if(d.data.name == cur.data()[0].secondary && d.parent.data.name == cur.data()[0].primary) {
+                		cur.style("visibility", "visible");
+                	}
+                	else if(d.data.fullname == cur.data()[0].title) {
                 		cur.style("visibility", "visible");
                 	}
                 });
