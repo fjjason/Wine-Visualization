@@ -374,6 +374,17 @@ $(document).ready(function() {
             .duration(750)
             .attrTween('transform', arcTweenText);
 
+
+
+        g.append("svg:image")
+        .attr('x', -35)
+        .attr('y', -35)
+        .attr('width', 70)
+        .attr('height', 70)
+        .attr("xlink:href", "grape.png")
+
+
+
     }
     // d3.selectAll(".showSelect").on("click", showTopTopics);
     // d3.selectAll(".sizeSelect").on("click", sliceSizer);
