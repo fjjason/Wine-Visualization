@@ -206,16 +206,35 @@ function highlightSelectedSlice(c, i) {
     var rootPath = clicked.path(root).reverse();
     rootPath.shift(); // remove root node from the array
     newSlice.style("opacity", 0.4);
-    circles.style("opacity", .04);
     // console.log(rootPath)
+    circles.style("visibility", "hidden");
     newSlice.filter(function(d) {
             if (d == clicked && d.prevClicked) {
                 d.prevClicked = false;
                 newSlice.style("opacity", 1);
-                circles.style("opacity", 1);
+                circles.style("visibility", "visible");
                 return true;
             } else if (d == clicked) {
                 d.prevClicked = true;
+                // THIS IS WHERE WE FILTER INDIVIDUAL DOTS
+                circles.each(function() {
+                	var cur = d3.select(this)
+                	console.log(d.data.name);
+                	console.log(cur.data()[0].primary);
+                	console.log(d.data.name.includes(cur.data()[0].primary))
+                	console.log("---")
+
+                	if(d.data.name == cur.data()[0].primary) {
+                		cur.style("visibility", "visible");
+                	}
+                	else if(d.data.name == cur.data()[0].secondary && d.parent.data.name == cur.data()[0].primary) {
+                		cur.style("visibility", "visible");
+                	}
+                	else if(d.data.fullname == cur.data()[0].title) {
+                		cur.style("visibility", "visible");
+                	}
+                });
+                // HERE
                 return true;
             } else {
                 d.prevClicked = false;
@@ -296,8 +315,8 @@ function computeTextRotation(d) {
     var angle = (d.x0 + d.x1) / Math.PI * 90;
     // Avoid upside-down labels
     (angle < 120 || angle > 270) ? angle : angle + 180; 
-    return angle + 90// labels as rims
-    //return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
+    //return angle + 90// labels as rims
+    return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
 }
 
 });
