@@ -7,6 +7,8 @@ $(document).ready(function(){
 
   var parseTime= d3.timeParse("%Y")
 
+  var circles;
+
   var x = d3.scaleLinear()
       .range([0, width]);
 
@@ -27,7 +29,7 @@ $(document).ready(function(){
   // creates a generator for symbols
   var symbol = d3.symbol().size(100);  
     
-  var svg = d3.select(".graph").append("svg")
+  var chartsvg = d3.select(".graph").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -39,6 +41,7 @@ $(document).ready(function(){
 
   d3.csv('WineDataSet.csv', function(error, data){
       data.forEach(function(d){
+      d.title = d.title;
       d.points = +d.points;
       d.year1  = d.year;
       d.price  = d.price;
@@ -57,23 +60,23 @@ $(document).ready(function(){
           return d.year;
       })).nice();
     
-    svg.append('g')
+    chartsvg.append('g')
       .attr('transform', 'translate(-1,' + (height-45) + ')')
       .attr('class', 'x axis')
       .call(xAxis);
 
-    svg.append('g')
+    chartsvg.append('g')
       .attr('transform', 'translate(-7,0)')
       .attr('class', 'y axis')
       .call(yAxis);
 
-      svg.append('text')
+    chartsvg.append('text')
           .attr('x', 10)
           .attr('y', 10)
           .attr('class', 'label')
           .text('Vintage Year');
 
-      svg.append('text')
+    chartsvg.append('text')
           .attr('x', width)
           .attr('y', height - 10)
           .attr('text-anchor', 'end')
@@ -83,20 +86,20 @@ $(document).ready(function(){
     // we use the ordinal scale symbols to generate symbols
     // such as d3.symbolCross, etc..
     // -> symbol.type(d3.symbolCross)()
-      var circles = svg.selectAll(".dot")
-          .data(data)
-          .enter().append("circle")
-          .attr("class", "dot")
-          .attr("r", function(d) { return 7; })
-          .attr("cx", function(d) {return x(d.points);})
-          .attr("cy", function(d) {return y(d.year);})
-          .style("fill", function (d) { return color(d.primary); })
-          .on("mouseover", function(d) {
-              tooltip.transition()
-              .duration(200)
-              .style("opacity", 1);
-              tooltip.html(d.title.bold() + 
-              	  "<hr><b>Vintage Year:</b> " + d.year1 + 
+    circles = chartsvg.selectAll(".dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("class", "dot")
+        .attr("r", function(d) { return 7; })
+        .attr("cx", function(d) {return x(d.points);})
+        .attr("cy", function(d) {return y(d.year);})
+        .style("fill", function (d) { return color(d.primary); })
+        .on("mouseover", function(d) {
+            tooltip.transition()
+            .duration(200)
+            .style("opacity", .9);
+            tooltip.html(d.title.bold() + 
+    	      	  "<hr><b>Vintage Year:</b> " + d.year1 + 
                   "<br/><b>Price:</b> $" + d.price + 
                   "<br/><b>Variety:</b> " + d.variety + 
                   "<br/><b>Origin: </b>" + d.country + " ("+d.province + ") "+  
@@ -203,13 +206,15 @@ function highlightSelectedSlice(c, i) {
     var rootPath = clicked.path(root).reverse();
     rootPath.shift(); // remove root node from the array
     newSlice.style("opacity", 0.4);
+    circles.style("opacity", .04);
     // console.log(rootPath)
     newSlice.filter(function(d) {
-            if (d === clicked && d.prevClicked) {
+            if (d == clicked && d.prevClicked) {
                 d.prevClicked = false;
                 newSlice.style("opacity", 1);
+                circles.style("opacity", 1);
                 return true;
-            } else if (d === clicked) {
+            } else if (d == clicked) {
                 d.prevClicked = true;
                 return true;
             } else {
