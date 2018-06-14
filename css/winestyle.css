@@ -4,18 +4,35 @@ body {
     background-color: #F0F8FF;
 }
 .tooltip {
-    position: absolute;             
-    width: 200px;                                                    
+    opacity: 0;
+    position: absolute;          
+    width: 225px;                                                    
     font: 12px sans-serif;
-    font-weight: bold;
     background: white; 
     border-style: solid;
     border-color: #A80000 ;        
-    border-radius: 5px;         
+    border-radius: 10px 0px 10px 10px;
+    border-width: 1px;         
     pointer-events: none;
-    padding-top: 5px;
-    padding-left: 5px;
+    padding: 5px 5px 5px 5px;
 }
+
+.image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-top: 40px;
+    border: 1px solid red;
+}
+
+.grape {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    z-index: 1;
+}
+
 /* CSS for the index title "A Thousand Nights in Vegas */
 .maintitle {
 
@@ -25,30 +42,25 @@ body {
     text-shadow: 1px 1px 1px #000;
 }
 
-.maintitle strong {
-    color: red;
-    border-radius: 25px;
-    padding: 10px;
-    border:1px dashed #333;
-    background-color: #eee;
-}
+
 
 /* CSS for simulation container */
 .simcontainer {
-    height: 1600px;
+    height: 800px;
     width: 100%;
     margin: 0 auto;
     text-shadow: 0.5px 0.5px 0.5px #000;
 }
 
 .sun {
+     z-index: 0;
     width: 60%;
     height: 10000px;
     text-align: center;
 }
 /* CSS for user game options */
 .optioncontainer {
-    height: 1600px;
+    height: 800px;
     width: 55%;
     float: left;
     margin: 0px;
@@ -57,35 +69,6 @@ body {
     border-top: 2px solid #ddd;
 }
 
-#gamecontainer {
-    width: 100%;
-    text-align: center;
-}
-
-#hiddengames {
-    font-size: 20px;
-    padding-bottom: 10px;
-}
-
-#rulescontainer {
-    width: 400px;
-    text-align: center;
-    margin: -60px 0 0 170px;
-}
-
-#hiddenrules {
-    font-size: 20px;
-}
-
-#strategycontainer {
-    width: 100%;
-    text-align: center;
-}
-
-#hiddenstrategies {
-    font-size: 20px;
-    padding-bottom: 10px;
-}
 
 .clickAppear {
     cursor: pointer;
@@ -108,7 +91,7 @@ body {
 
 /* CSS for the graph */
 .graphcontainer {
-    height: 1600px;
+    height: 800px;
     width: 45%;
     float: right;
     background-color: #CCFFFF;
@@ -174,37 +157,6 @@ path:hover{
     shape-rendering: crispEdges;
 }
 
-.grid .tick {
-    stroke: #333;
-    stroke-opacity: 0.4;
-    shape-rendering: crispEdges;
-    stroke-width: 1;
-}
-
-.grid path {
-    stroke-width: 1;
-    stroke: none;
-}
-
-.histbar rect{
-    fill:#79b;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
-.histbar rect:hover {
-    cursor: pointer;
-    stroke:black;
-    stroke-width:1;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-}
 
 /* CSS for additional info */
 .additionalinfo {
@@ -213,7 +165,8 @@ path:hover{
     margin: 0 auto;
     text-align: left;
     background-color:#6699FF;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+
 }
 
 #memberslist {

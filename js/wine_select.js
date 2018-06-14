@@ -1,11 +1,13 @@
-
+// CHART CODE HERE
 $(document).ready(function(){
   var margin = {top: 20, right: 80, bottom: 30, left: 50},
       width = 600 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+      height = 600 - margin.top - margin.bottom;
   
 
   var parseTime= d3.timeParse("%Y")
+
+  var circles;
 
   var x = d3.scaleLinear()
       .range([0, width]);
@@ -27,7 +29,7 @@ $(document).ready(function(){
   // creates a generator for symbols
   var symbol = d3.symbol().size(100);  
     
-  var svg = d3.select(".graph").append("svg")
+  var chartsvg = d3.select(".graph").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -39,6 +41,7 @@ $(document).ready(function(){
 
   d3.csv('WineDataSet.csv', function(error, data){
       data.forEach(function(d){
+      d.title = d.title;
       d.points = +d.points;
       d.year1  = d.year;
       d.price  = d.price;
@@ -57,23 +60,23 @@ $(document).ready(function(){
           return d.year;
       })).nice();
     
-    svg.append('g')
-      .attr('transform', 'translate(-3,' + (height+5) + ')')
+    chartsvg.append('g')
+      .attr('transform', 'translate(-1,' + (height-45) + ')')
       .attr('class', 'x axis')
       .call(xAxis);
 
-    svg.append('g')
+    chartsvg.append('g')
       .attr('transform', 'translate(-7,0)')
       .attr('class', 'y axis')
       .call(yAxis);
 
-      svg.append('text')
+    chartsvg.append('text')
           .attr('x', 10)
           .attr('y', 10)
           .attr('class', 'label')
           .text('Vintage Year');
 
-      svg.append('text')
+    chartsvg.append('text')
           .attr('x', width)
           .attr('y', height - 10)
           .attr('text-anchor', 'end')
@@ -83,26 +86,26 @@ $(document).ready(function(){
     // we use the ordinal scale symbols to generate symbols
     // such as d3.symbolCross, etc..
     // -> symbol.type(d3.symbolCross)()
-      var circles = svg.selectAll(".dot")
-          .data(data)
-          .enter().append("circle")
-          .attr("class", "dot")
-          .attr("r", function(d) { return 5; })
-          .attr("cx", function(d) {return x(d.points);})
-          .attr("cy", function(d) {return y(d.year);})
-          .style("fill", function (d) { return color(d.primary); })
-          .on("mouseover", function(d) {
-              tooltip.transition()
-              .duration(200)
-              .style("opacity", 1);
-              tooltip.html( d.title + 
-                  "<br/>" + "Vintage Year:" + d.year1 + 
-                  "<br/>" + "Price(USD): $" + d.price + 
-                  "<br/>" + "Variety: " + d.variety + 
-                  "<br/>" + "Place of Origin: " + d.country + " ("+d.province + ") "+  
-                  "<br/> " + "Expert Grade(out of 100pts): " + d.points + "")
-              .style("left", (d3.event.pageX -120) + "px")
-              .style("top", (d3.event.pageY-30) + "px");
+    circles = chartsvg.selectAll(".dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("class", "dot")
+        .attr("r", function(d) { return 7; })
+        .attr("cx", function(d) {return x(d.points);})
+        .attr("cy", function(d) {return y(d.year);})
+        .style("fill", function (d) { return color(d.primary); })
+        .on("mouseover", function(d) {
+            tooltip.transition()
+            .duration(200)
+            .style("opacity", .9);
+            tooltip.html(d.title.bold() + 
+    	      	  "<hr><b>Vintage Year:</b> " + d.year1 + 
+                  "<br/><b>Price:</b> $" + d.price + 
+                  "<br/><b>Variety:</b> " + d.variety + 
+                  "<br/><b>Origin: </b>" + d.country + " ("+d.province + ") "+  
+                  "<br/><b>Rating (80-100):</b> " + d.points + "")
+              .style("left", (d3.event.pageX - 240) + "px")
+              .style("top", (d3.event.pageY) + "px");
           })
           .on("mouseout", function(d) {
               tooltip.transition()
@@ -117,156 +120,187 @@ $(document).ready(function(){
 
   });
 
-  var margin1 = {top: 20, right: 80, bottom: 30, left: 50},
-      width1 = 1000 - margin1.left - margin1.right,
-      height1 = 650 - margin1.top - margin1.bottom;
-      maxRadius = (Math.min(width1, height1) / 2) - 5;
 
-        var formatNumber = d3.format(',d');
+// SUNBURST CODE HERE
 
-        var xscale = d3.scaleLinear()
-            .range([0, 2 * Math.PI])
-            .clamp(true);
+// Variables
+var allNodes;
+var width = 700;
+var height = 600;
+var radius = Math.min(width, height) / 2;
+var color = d3.scaleOrdinal(d3.schemeCategory20b);
+var color2 = d3.scaleOrdinal(d3.schemeCategory20b);
+d3.selectAll('button').style("background-color",
+    color2()
+);
+// Size our <svg> element, add a <g> element, and move translate 0,0 to the center of the element.
+var g = d3.select('.chart')
+    .attr('width', width)
+    .attr('height', height)
+    .append('g')
+    .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+// Create our sunburst data structure and size it.
+var partition = d3.partition()
+    .size([2 * Math.PI, radius]);
+// Get the data from our JSON file
+d3.json("sunburst.json", function(error, nodeData) {
+    if (error) throw error;
+    allNodes = nodeData;
+    var showNodes = JSON.parse(JSON.stringify(nodeData));
+    drawSunburst(allNodes);
+});
+function drawSunburst(data) {
+    // Find the root node, calculate the node.value, and sort our nodes by node.value
+    root = d3.hierarchy(data)
+        .sum(function(d) { return d.size; })
+        .sort(function(a, b) { return b.value - a.value; });
+    // Calculate the size of each arc; save the initial angles for tweening.
+    partition(root);
+    arc = d3.arc()
+        .startAngle(function(d) { d.x0s = d.x0; return d.x0; })
+        .endAngle(function(d) { d.x1s = d.x1; return d.x1; })
+        .innerRadius(function(d) { return d.y0; })
+        .outerRadius(function(d) { return d.y1; });
+    // Add a <g> element for each node; create the slice variable since we'll refer to this selection many times
+    slice = g.selectAll('g.node').data(root.descendants(), function(d) { return d.data.name; }); // .enter().append('g').attr("class", "node");
+    newSlice = slice.enter().append('g').attr("class", "node").merge(slice);
+    slice.exit().remove();
+    // TRY 1: ID selection that's has been drawn previously... (requires us to set "drawn" down below)
+    //newSlice.filter ( function(d) { return !d.drawn; }).append('path')
+    //    .attr("display", function (d) { return d.depth ? null : "none"; }).style('stroke', '#fff');
+    // TRY 2: Only create paths on "first run"
+    //if (firstRun) {
+    //    newSlice.append('path').attr("display", function (d) { return d.depth ? null : "none"; }).style('stroke', '#fff');
+    //}
+    // TRY 1&2: Set path-d and color always. But this isn't using new arc...?
+    //newSlice.selectAll('path').attr("d", arc).style("fill", function (d) { return color((d.children ? d : d.parent).data.name); });
+    // Append <path> elements and draw lines based on the arc calculations. Last, color the lines and the slices.
+    slice.selectAll('path').remove();
+    newSlice.append('path').attr("display", function(d) { return d.depth ? null : "none"; })
+        .attr("d", arc)
+        .style('stroke', '#fff')
+        .style("fill", function(d) { return color((d.children ? d : d.parent).data.name); });
+    // Populate the <text> elements with our data-driven titles.
+    slice.selectAll('text').remove();
+    newSlice.append("text")
+        .attr("transform", function(d) {
+            return "translate(" + arc.centroid(d) + ")rotate(" + computeTextRotation(d) + ")";
+        })
+        .attr("dx", "-30")
+        .attr("dy", ".4em")
+        .style("font-size", "13px")
+        .text(function(d) { return d.parent ? d.data.name : "" });
+    newSlice.on("click", highlightSelectedSlice);
+    root.count();
+    root.sort(function(a, b) { return b.value - a.value; });
+    partition(root);
+    newSlice.selectAll("path").transition().duration(750).attrTween("d", arcTweenPath);
+    newSlice.selectAll("text").transition().duration(750).attrTween("transform", arcTweenText);
+};
+// d3.selectAll(".showSelect").on("click", showTopTopics);
+// d3.selectAll(".sizeSelect").on("click", sliceSizer);
+// Redraw the Sunburst Based on User Input
+function highlightSelectedSlice(c, i) {
+    clicked = c;
+    console.log(clicked)
+    var rootPath = clicked.path(root).reverse();
+    rootPath.shift(); // remove root node from the array
+    newSlice.style("opacity", 0.4);
+    circles.style("opacity", .04);
+    // console.log(rootPath)
+    newSlice.filter(function(d) {
+            if (d == clicked && d.prevClicked) {
+                d.prevClicked = false;
+                newSlice.style("opacity", 1);
+                circles.style("opacity", 1);
+                return true;
+            } else if (d == clicked) {
+                d.prevClicked = true;
+                // THIS IS WHERE WE FILTER INDIVIDUAL DOTS
 
-        var yscale = d3.scaleSqrt()
-            .range([maxRadius*.1, maxRadius]);
-
-        var color1 = d3.scaleOrdinal(d3.schemeCategory20);
-
-        var partition = d3.partition()
-          ;
-
-        var arc = d3.arc()
-            .startAngle(d => xscale(d.x0))
-            .endAngle(d => xscale(d.x1))
-            .innerRadius(d => Math.max(0, yscale(d.y0)))
-            .outerRadius(d => Math.max(0, yscale(d.y1)));
-
-        var middleArcLine = d => {
-            var halfPi = Math.PI/2;
-            var angles = [xscale(d.x0) - halfPi, xscale(d.x1) - halfPi];
-            var r = Math.max(0, (yscale(d.y0) + yscale(d.y1)) / 2);
-
-            var middleAngle = (angles[1] + angles[0]) / 2;
-            var invertDirection = middleAngle > 0 && middleAngle < Math.PI; // On lower quadrants write text ccw
-            if (invertDirection) { angles.reverse(); }
-
-            var path = d3.path();
-            path.arc(0, 0, r, angles[0], angles[1], invertDirection);
-            return path.toString();
-        };
-
-        var textFits = d => {
-            var CHAR_SPACE = 6;
-
-            var deltaAngle = xscale(d.x1) - xscale(d.x0);
-            var r = Math.max(0, (yscale(d.y0) + yscale(d.y1)) / 2);
-            var perimeter = r * deltaAngle;
-
-            return d.data.name.length * CHAR_SPACE < perimeter;
-        };
-
-        var svg1 = d3.select('.chart').append('svg')
-            .style('width', '100vw')
-            .style('height', '100vh')
-            .append("g")
-            .attr("transform", "translate(" + (margin1.left*8) + "," + (margin1.top*16) + ")")
-            .attr('viewBox', `${-width1 / 2} ${-height1 / 2} ${width1} ${height1}`)
-            ; // Reset zoom on canvas click
-
-        d3.json('sunburst.json', (error, root) => {
-            if (error) throw error;
-
-            root = d3.hierarchy(root);
-            root.sum(d => d.size);
-
-            var slice = svg1.selectAll('g.slice')
-                .data(partition(root).descendants());
-
-            slice.exit().remove();
-            clicked = ""
-            var newSlice = slice.enter()
-                .append('g').attr('class', 'slice')
-                .on("click",function(d){
-                   d3.selectAll(".symbol").style("opacity",1)
-                   
-                   if (clicked !== d){
-                     d3.selectAll(".symbol")
-                       .filter(function(e){
-                       return e.primary !== d;
-                     })
-                       .style("opacity",0.1)
-                     clicked = d
-                   }
-                    else{
-                      clicked = ""
-                    }
-                });
-
-            newSlice.append('title')
-                .text(d => d.data.name + '\n' + formatNumber(d.value));
-
-            newSlice.append('path')
-                .attr('class', 'main-arc')
-                .style('fill', d => color1((d.children ? d : d.parent).data.name))
-                .attr('d', arc);
-
-            newSlice.append('path')
-                .attr('class', 'hidden-arc')
-                .attr('id', (_, i) => `hiddenArc${i}`)
-                .attr('d', middleArcLine);
-
-            var text = newSlice.append('text')
-                .style('fill', '#fff')
-                .attr('display', d => textFits(d) ? null : 'none');
-
-            // Add white contour
-            text.append('textPath')
-                .attr('startOffset','50%')
-                .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
-                .text(d => d.data.name)
-                .style('fill', 'none')
-                .style('stroke', '#000')
-                .style('stroke-width', .8)
-                .style('stroke-linejoin', 'round');
-
-            text.append('textPath')
-                .attr('startOffset','50%')
-                .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
-                .text(d => d.data.name);
-        });
-
-        function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
-            // Reset to top-level if no data point specified
-
-            var transition = svg1.transition()
-                .duration(750)
-                .tween('scale', () => {
-                    var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
-                        yd = d3.interpolate(y.domain(), [d.y0, 1]);
-                    return t => { x.domain(xd(t)); y.domain(yd(t)); };
-                });
-
-            transition.selectAll('path.main-arc')
-                .attrTween('d', d => () => arc(d));
-
-            transition.selectAll('path.hidden-arc')
-                .attrTween('d', d => () => middleArcLine(d));
-
-            transition.selectAll('text')
-                .attrTween('display', d => () => textFits(d) ? null : 'none');
-
-            moveStackToFront(d);
-
-            //
-
-            function moveStackToFront(elD) {
-                svg1.selectAll('.slice').filter(d => d === elD)
-                    .each(function(d) {
-                        this.parentNode.appendChild(this);
-                        if (d.parent) { moveStackToFront(d.parent); }
-                    })
+                // HERE
+                return true;
+            } else {
+                d.prevClicked = false;
+                return (rootPath.indexOf(d) >= 0);
             }
-        }
+        })
+        .style("opacity", 1);
+    //d3.select("#sidebar").text("another!");
+};
+// Redraw the Sunburst Based on User Input
+function sliceSizer(r, i) {
+    // Determine how to size the slices.
+    if (this.value === "size") {
+        // root.sum(function(d) { return d.size; });
+        console.log("one")
+    } else {
+        root.count();
+        console.log("two")
+    }
+    
+    root.sort(function(a, b) { return b.value - a.value; });
+    partition(root);
+    newSlice.selectAll("path").transition().duration(750).attrTween("d", arcTweenPath);
+    newSlice.selectAll("text").transition().duration(750).attrTween("transform", arcTweenText);
+};
+// Redraw the Sunburst Based on User Input
+function showTopTopics(r, i) {
+    //alert(this.value);
+    var showCount;
+    // Determine how to size the slices.
+    if (this.value === "top3") {
+        showCount = 3;
+    } else if (this.value === "top6") {
+        showCount = 6;
+    } else {
+        showCount = 100;
+    }
+    var showNodes = JSON.parse(JSON.stringify(allNodes));
+    showNodes.children.splice(showCount, (showNodes.children.length - showCount));
+    drawSunburst(showNodes);
+};
+/**
+ * When switching data: interpolate the arcs in data space.
+ * @param {Node} a
+ * @param {Number} i
+ * @return {Number}
+ */
+function arcTweenPath(a, i) {
+    var oi = d3.interpolate({ x0: a.x0s, x1: a.x1s }, a);
+    function tween(t) {
+        var b = oi(t);
+        a.x0s = b.x0;
+        a.x1s = b.x1;
+        return arc(b);
+    }
+    return tween;
+}
+/**
+ * When switching data: interpolate the text centroids and rotation.
+ * @param {Node} a
+ * @param {Number} i
+ * @return {Number}
+ */
+function arcTweenText(a, i) {
+    var oi = d3.interpolate({ x0: a.x0s, x1: a.x1s }, a);
+    function tween(t) {
+        var b = oi(t);
+        return "translate(" + arc.centroid(b) + ")rotate(" + computeTextRotation(b) + ")";
+    }
+    return tween;
+}
+/**
+ * Calculate the correct distance to rotate each label based on its location in the sunburst.
+ * @param {Node} d
+ * @return {Number}
+ */
+function computeTextRotation(d) {
+    var angle = (d.x0 + d.x1) / Math.PI * 90;
+    // Avoid upside-down labels
+    (angle < 120 || angle > 270) ? angle : angle + 180; 
+    return angle + 90// labels as rims
+    //return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
+}
 
 });
