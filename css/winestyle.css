@@ -46,7 +46,7 @@ body {
 
 /* CSS for simulation container */
 .simcontainer {
-    height: 1600px;
+    height: 800px;
     width: 100%;
     margin: 0 auto;
     text-shadow: 0.5px 0.5px 0.5px #000;
@@ -60,7 +60,7 @@ body {
 }
 /* CSS for user game options */
 .optioncontainer {
-    height: 1600px;
+    height: 800px;
     width: 55%;
     float: left;
     margin: 0px;
@@ -69,33 +69,6 @@ body {
     border-top: 2px solid #ddd;
 }
 
-#gamecontainer {
-    width: 100%;
-    text-align: center;
-}
-
-#hiddengames {
-    font-size: 20px;
-    padding-bottom: 10px;
-}
-
-#rulescontainer {
-    width: 400px;
-    text-align: center;
-    margin: -60px 0 0 170px;
-}
-
-
-
-#strategycontainer {
-    width: 100%;
-    text-align: center;
-}
-
-#hiddenstrategies {
-    font-size: 20px;
-    padding-bottom: 10px;
-}
 
 .clickAppear {
     cursor: pointer;
@@ -118,7 +91,7 @@ body {
 
 /* CSS for the graph */
 .graphcontainer {
-    height: 1600px;
+    height: 800px;
     width: 45%;
     float: right;
     background-color: #CCFFFF;
@@ -184,37 +157,6 @@ path:hover{
     shape-rendering: crispEdges;
 }
 
-.grid .tick {
-    stroke: #333;
-    stroke-opacity: 0.4;
-    shape-rendering: crispEdges;
-    stroke-width: 1;
-}
-
-.grid path {
-    stroke-width: 1;
-    stroke: none;
-}
-
-.histbar rect{
-    fill:#79b;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
-.histbar rect:hover {
-    cursor: pointer;
-    stroke:black;
-    stroke-width:1;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-}
 
 /* CSS for additional info */
 .additionalinfo {
@@ -223,7 +165,8 @@ path:hover{
     margin: 0 auto;
     text-align: left;
     background-color:#6699FF;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+
 }
 
 #memberslist {
