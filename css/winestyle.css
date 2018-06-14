@@ -6,6 +6,7 @@ body {
 a {                                             
     font: 16px sans-serif;
 }
+.
 .tooltip {
     position: absolute;          
     width: 225px;                                                    
@@ -35,18 +36,21 @@ a {
     z-index: 1;
 }
 
-/* CSS for the index title "A Thousand Nights in Vegas */
 .maintitle {
-
     text-align: center;
     margin: 0 auto;
     font-size: 25px;
     text-shadow: 1px 1px 1px #000;
 }
+#leftText {
+    padding-left: 50;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px #000;
+}
 
 
-
-/* CSS for simulation container */
 .simcontainer {
     height: 800px;
     width: 100%;
@@ -59,7 +63,6 @@ a {
     width: 60%;
     text-align: center;
 }
-/* CSS for user game options */
 .optioncontainer {
     height: 800px;
     width: 55%;
@@ -91,7 +94,6 @@ a {
     transition: all 0.5s;
 }
 
-/* CSS for the graph */
 .graphcontainer {
     height: 800px;
     width: 45%;
@@ -161,7 +163,6 @@ path:hover{
 }
 
 
-/* CSS for additional info */
 .additionalinfo {
     width: 1800px;
     height: 230px;
@@ -170,29 +171,4 @@ path:hover{
     background-color:#6699FF;
     margin-bottom: 0;
 
-}
-
-#memberslist {
-    float: left;
-    width: 150px;
-    height: 100%;
-    padding-left: 40px;
-}
-
-#classinfolist {
-    float: left;
-    width: 390px;
-    height: 100%;
-}
-
-#filesubmitlist {
-    float: left;
-    width: 250px;
-    height: 100%;
-}
-
-#resourceslist {
-    float: left;
-    width: 450px;
-    height: 100%;
 }

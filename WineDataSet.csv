@@ -3,7 +3,7 @@ Portugal,Fruity,Berry,87,15,Douro,Quinta dos Avidagos 2011 Avidagos Red (Douro),
 US,Woody,Oak,86,40,Virginia,Tarara 2010 #SocialSecret Red (Virginia),2010,Red Blend,Tarara,Stilton Cheese
 US,Woody,Oak,88,23,California,Ferrari-Carano 2014 Siena Red (Sonoma County),2014,Red Blend,Ferrari-Carano,Pasta
 Italy,Earthy,Dusty,92,70,Piedmont,Ceretto 2003 Bricco Rocche Prapa (Barolo),2003,Nebbiolo,Ceretto,"Skirt Steak, Green Beans"
-Italy,Fruity,Fresh (F),88,25,Northeastern Italy,Tenuta Peter Salva & Sahne 2007 De Silva Sauvignon (Alto Adige),2007,Sauvignon,Tenuta Peter Salva & Sahne,"Pasta,  Shellfish,  Mature and hard cheese,  Lean fish,  Cured Meat"
+Italy,Fruity,Fresh (F),88,25,Northeastern Italy,Tenuta Peter Salva & Sahne 2007 De Silva Sauvignon (Alto Adige),2007,Sauvignon,Tenuta Peter Salva & Sahne,"Pasta,  Shellfish,  Mature & Hard Cheese,  Lean fish,  Cured Meat"
 South Africa,Fruity,Berry,90,40,Coastal Region,Delaire Graff 2013 Reserve White (Coastal Region),2013,White Blend,Delaire Graff,"Beef, Lamb, Poultry"
 Argentina,Fruity,Dried Fruit,85,15,Mendoza Province,Cueva de las Manos 2007 Reserve Malbec (Lujan de Cuyo),2007,Malbec,Cueva de las Manos,"Beef, Lamb, Poultry"
 US,Woody,Oak,92,125,California,Parallel 2010 Fortune Teller Cabernet Sauvignon (Napa Valley),2010,Cabernet Sauvignon,Parallel,"Pasta, Bread"
@@ -20,7 +20,7 @@ Chile,Chemical,Diesel,82,20,Leyda Valley,Amayna 2011 Sauvignon Blanc (Leyda Vall
 Italy,Chemical,Tar,80,12,Central Italy,Fattoria Giuseppe Savini 2011 Rondineto Merlot (Colli Aprutini),2011,Merlot,Fattoria Giuseppe Savini,"Beef, Pasta, Veal, Poultry"
 Italy,Caramel,Molasses,100,210,Tuscany,Avignonesi 1995 Occhio di Pernice (Vin Santo di Montepulciano),1995,Prugnolo Gentile,Avignonesi,"Beef, Veal, Pork, Game, Mature & Hard Cheese, Poultry"
 Spain,Woody,Oak,81,11,Catalonia,Raimat 2009 Castell de Raimat Cabernet Sauvignon (Costers del Segre),2009,Cabernet Sauvignon,Raimat,"Beef, Lamb, Poultry"
-US,Fruity,Tropical,82,13,California,Magnolia Court 2012 Sauvignon Blanc (Central Coast),2012,Sauvignon Blanc,Magnolia Court,"Shellfish, Vegetarian,  Goat cheese"
+US,Fruity,Tropical,82,13,California,Magnolia Court 2012 Sauvignon Blanc (Central Coast),2012,Sauvignon Blanc,Magnolia Court,"Shellfish, Vegetarian,  Goat Cheese"
 US,Woody,Vanilla,89,18,California,Bink 2013 Lumineux Rose (Yorkville Highlands),2013,Rose,Bink,"Veal, Pork, Game (Deer & Venison), Rich Fish (Salmon & Tuna), Poultry"
 Italy,Pungent,Menthol,91,105,Piedmont,Viberti 2007 La Volta Riserva (Barolo),2007,Nebbiolo,Viberti,"Beef, Pasta, Lamb, Game (Deer & Venison)"
 US,Fruity,Tree Fruit,90,19,California,Kuyam 2008 Thirteen Moons Red (Santa Barbara County),2008,Bordeaux-style Red Blend,Kuyam,"Beef, Lamb, Game (Deer & Venison), Poultry"
@@ -28,7 +28,7 @@ France,Fruity,Berry,87,15,Bordeaux,Chateau Vrai Caillou 2014 Bordeaux Suparieur,
 Chile,Woody,Vanilla,83,8,Colchagua Valley,Via Bisquertt 2014 Petirrojo Reserva Estate Grown Cabernet Sauvignon (Colchagua Valley),2014,Cabernet Sauvignon,Via Bisquertt,"Beef, Lamb, Game (Deer & Venison), Poultry"
 Germany,Fruity,Tree Fruit,93,55,Rheingau,Schloss Johannisberger 2012 Granlock Spatlese Riesling (Rheingau),2012,Riesling,Schloss Johannisberger,"Pork, Shellfish, Spicy Food, Poultry, Cured Meat"
 US,Biological,Yeasty,92,25,California,Ancestrale 2016 Pet Nat Method Ancestral Bassi Vineyard Pinot Noir (San Luis Obispo County),2016,Pinot Noir,Ancestrale,"Beef, Veal, Game (Deer,  Venison), Poultry"
-US,Fruity,Citrus,91,20,California,Calstar Cellars 2014 Sauvignon Blanc (Russian River Valley),2014,Sauvignon Blanc,Calstar Cellars,"Shellfish, Vegetarian, Goat cheese"
+US,Fruity,Citrus,91,20,California,Calstar Cellars 2014 Sauvignon Blanc (Russian River Valley),2014,Sauvignon Blanc,Calstar Cellars,"Shellfish, Vegetarian, Goat Cheese"
 Argentina,Woody,Oak,82,12,Mendoza Province,Casarena 2014 505 Chardonnay (Mendoza),2014,Chardonnay,Casarena,"Pork, Rich Fish (Salmon & Tuna), Vegetarian, Poultry"
 New Zealand,Herbal,Fresh (H),88,15,Marlborough,Twin Islands 2013 Sauvignon Blanc (Marlborough),2013,Sauvignon Blanc,Twin Islands,"Shellfish, Vegetarian, Goat Cheese"
 Australia,Fruity,Citrus,87,19,South Australia,Penfolds 2002 Reserve Bin Riesling (Eden Valley),2002,Riesling,Penfolds,"Pork, Shellfish, Poultry, Appetizers & Snacks, Cured Meat"
