@@ -3,6 +3,35 @@ body {
     font-family: sans-serif;
     background-color: #F0F8FF;
 }
+.tooltip {
+    position: absolute;             
+    width: 200px;                                                    
+    font: 12px sans-serif;
+    font-weight: bold;
+    background: white; 
+    border-style: solid;
+    border-color: #A80000 ;        
+    border-radius: 5px;         
+    pointer-events: none;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-top: 40px;
+    border: 1px solid red;
+}
+
+.grape {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    z-index: 1;
+}
 
 /* CSS for the index title "A Thousand Nights in Vegas */
 .maintitle {
@@ -13,13 +42,7 @@ body {
     text-shadow: 1px 1px 1px #000;
 }
 
-.maintitle strong {
-    color: red;
-    border-radius: 25px;
-    padding: 10px;
-    border:1px dashed #333;
-    background-color: #eee;
-}
+
 
 /* CSS for simulation container */
 .simcontainer {
@@ -29,13 +52,19 @@ body {
     text-shadow: 0.5px 0.5px 0.5px #000;
 }
 
+.sun {
+     z-index: 0;
+    width: 60%;
+    height: 10000px;
+    text-align: center;
+}
 /* CSS for user game options */
 .optioncontainer {
     height: 1600px;
-    width: 60%;
+    width: 55%;
     float: left;
     margin: 0px;
-    background-color:#c7fea7;
+    background-color:#CCFFFF;
     font-size: 12px;
     border-top: 2px solid #ddd;
 }
@@ -56,9 +85,7 @@ body {
     margin: -60px 0 0 170px;
 }
 
-#hiddenrules {
-    font-size: 20px;
-}
+
 
 #strategycontainer {
     width: 100%;
@@ -92,13 +119,19 @@ body {
 /* CSS for the graph */
 .graphcontainer {
     height: 1600px;
-    width: 40%;
+    width: 45%;
     float: right;
-    background-color: #ADD8E6;
+    background-color: #CCFFFF;
     border-top: 2px solid #ddd;
 }
 
 path{
+    stroke: black;
+    stroke-width: 1;
+    fill: none;
+    cursor: pointer;
+}
+#chart path{
     stroke: black;
     stroke-width: 0;
     fill: none;
