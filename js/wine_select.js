@@ -299,8 +299,8 @@ function computeTextRotation(d) {
     var angle = (d.x0 + d.x1) / Math.PI * 90;
     // Avoid upside-down labels
     (angle < 120 || angle > 270) ? angle : angle + 180; 
-    return angle + 90// labels as rims
-    //return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
+    //return angle + 90// labels as rims
+    return (angle < 180) ? angle - 90 : angle + 90;  // labels as spokes
 }
 
 });
